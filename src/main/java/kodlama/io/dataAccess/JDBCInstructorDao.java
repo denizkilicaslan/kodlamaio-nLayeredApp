@@ -5,11 +5,11 @@ import kodlama.io.entities.Instructor;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HibarneteInstructorDao implements InstructorDao {
+public class JDBCInstructorDao implements InstructorDao{
 
     List<Instructor> instructorList;
 
-    public HibarneteInstructorDao() {
+    public JDBCInstructorDao() {
         instructorList = new ArrayList<>();
     }
 

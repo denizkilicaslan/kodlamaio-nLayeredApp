@@ -2,10 +2,13 @@ package kodlama.io;
 
 import kodlama.io.bussiness.CategoryManager;
 import kodlama.io.bussiness.CourseManager;
+import kodlama.io.bussiness.InstructorManager;
 import kodlama.io.dataAccess.HibarneteCourseDao;
+import kodlama.io.dataAccess.HibarneteInstructorDao;
 import kodlama.io.dataAccess.JDBCCategoryDao;
 import kodlama.io.entities.Category;
 import kodlama.io.entities.Course;
+import kodlama.io.entities.Instructor;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -36,6 +39,20 @@ public class Main {
 
         for (Category cat : categoryManager.getAll()) {
             System.out.println(cat.getName());
+        }
+
+        Instructor instructor=new Instructor(1,"Deniz");
+        Instructor instructor1=new Instructor(1,"Engin Demiroğ");
+        Instructor instructor2=new Instructor(1,"Ali");
+
+        InstructorManager instructorManager=new InstructorManager(new HibarneteInstructorDao());
+
+        instructorManager.add(instructor);
+        instructorManager.add(instructor1);
+        instructorManager.add(instructor2);
+
+        for (Instructor instructr : instructorManager.getAll()) {
+            System.out.println(instructr.getName());
         }
     }
 }
