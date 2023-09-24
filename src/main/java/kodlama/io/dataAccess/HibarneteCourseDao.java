@@ -5,12 +5,12 @@ import kodlama.io.entities.Course;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HibarneteCourseDao implements CourseDao{
+public class HibarneteCourseDao implements CourseDao {
 
     List<Course> courseList;
 
-    public HibarneteCourseDao () {
-        this.courseList=new ArrayList<>();
+    public HibarneteCourseDao() {
+        this.courseList = new ArrayList<>();
     }
 
     @Override
